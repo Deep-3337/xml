@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Inventory>
+	<GlobalName></GlobalName>
+	<OracleSID></OracleSID>
+	<Domain></Domain>
+	<Administrator></Administrator>
+	<DBAttributes type="production|develpoment|testing" version="7|8|8i|9i"></DBAttributes>
+	<Comments></Comments>
+</Inventory>

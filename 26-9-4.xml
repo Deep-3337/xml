@@ -1,0 +1,16 @@
+<?xml version="1.0">
+<!DOCUMENT web-app[
+	<!ELEMENT web-app(display-name,description?, (servlet,servlet-maping)+)>
+		<!ATLIST web-app version="2.4|2.5|2.6" "2.5">
+	<!ELEMENT display-name #CDATA #REQUIRED>
+	<!ELEMENT description #CDATA>
+	<!ELEMENT servlet #CDATA>
+	<!ELEMENT servlet-maping #CDATA>
+]>
+
+<web-app version="2.5">
+	<display-name>DRS</display-name>
+	<description>Some good stuff</description>
+	<servlet>Run in windows</servlet>
+	<servlet-maping>Above Windows 8</servlet-maping>
+</web-app>

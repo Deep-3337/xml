@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE document[
+	<!ELEMENT document((title,subject,assessment)+,prerequisite?,textbooks+)>
+	<!ELEMENT title (#CDATA)>
+	<!ELEMENT subject (#CDATA>
+		<!ATLIST subject ID CDATA "1">
+		<!ATLIST subject subjectname CDATA>
+	<!ELEMENT assessment (#CDATA)>
+		<!ATLIST assessment type(exam|assignment)>
+	<!ELEMENT prerequisite (#CDATA)>
+	<!ELEMENT textbooks (#CDATA)>
+]>
