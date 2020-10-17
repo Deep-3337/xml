@@ -1,0 +1,41 @@
+<Schema>
+	<elememt name="movieticket">
+		<complex type mixed="true">
+			<sequence>
+				<elememt name="Moviename" type="string">
+					<complex type mixed="true">
+						<restriction base="string">
+							<mininclusive="3"/>
+							<maxinclusive="255"/>
+						</restriction>
+					</complex>
+				</elememt>
+				
+				<elememt name="Showtime" type="time" />
+				
+				<elememt name="ShowDate" type="date"/>
+				
+				<elememt name="showprice" type="digit" mininclusive="100" maxinclusive="700"/>
+					<complex type mixed="true">
+						<restriction base="digit">
+							<mininclusive="100"/>
+							<maxinclusive="700"/>
+						</restriction>
+					</complex>
+				</elememt>
+				
+				<elememt name="modeofpayment">
+					<complex>
+						<choice>
+							<elememt name="Cash" type="Cash"/>
+							<elememt name="CreditCard" type="CreditCard"/>
+							<elememt name="DebitCard" type="DebitCard"/>
+							<elememt name="NetBanking" type="NetBanking"/>
+						</choice>
+					</complex>
+				</elememt>
+			</sequence>
+		</complex>
+	</elememt>
+</Schema>
+

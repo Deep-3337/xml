@@ -1,0 +1,29 @@
+<Schema>
+	<element name="Book>
+		<complexType mixed="true">
+			<sequence>
+				<element name="Title"/>
+				
+				<element name="Author">
+					<ref name="Title"/>
+				</element>
+				
+				<element name="Name">
+					<sequence>
+						<element name="FirstName"/>
+						<element name="MiddleName"/>
+						<element name="LastName"/>
+					</sequence>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+	
+	<define name="Title">
+		<complexType>
+			<enumeration value="Mr."/>
+			<enumeration value="Ms."/>
+			<enumeration value="Dr."/>
+		</complexType>
+	</define>
+</Schema>

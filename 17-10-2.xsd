@@ -1,0 +1,32 @@
+<Schema>
+	<element name="Employee">
+		<complex type mixed="true">
+			<sequence>
+				<element name="Name"/>
+				<ref name="Salary"/>
+					
+				
+				<ref name="Title"/>
+			</sequence>
+		</complex>
+	</element>
+	
+	<define name="Salary">
+		<data type="decimal">
+			<param name="maxInclusive">7</param>
+			<param name="fractionDigits">2</param>
+			<mininclusive="10000"/>
+			<maxinclusive="90000"/>
+		</data>
+	</define>
+	
+	<define name="Title">
+		<complexType>
+			<enumeration value="Sale Manager"/>
+			<enumeration value="Salesperson"/>
+			<enumeration value="Receptionist"/>
+			<enumeration value="Developer"/>
+		</complexType>
+		
+	</define>
+</Schema>
