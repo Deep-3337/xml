@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE timetable[
+	<!ELEMENT timetable (timeslot)>
+		<!ATTLIST timetable value (ATKT | Regular) #REQUIRED>
+		
+		<!ELEMENT timeslot (date, holiday, coursedetails)>
+			<!ATTLIST timeslot year #PCDATA #REQUIRED>
+			<!ATTLIST timeslot semester #PCDATA #REQUIRED>
+			
+			<!ELEMENT date #PCDATA>
+			<!ELEMENT holiday #PCDATA>
+			<!ELEMENT coursedetails(supervisor, time, coursetitle, coursecode, description*)>
+				<!ELEMENT supervisor #PCDATA>
+					<!ATTLIST supervisor empid #PCDATA #REQUIRED>
+				<!ELEMENT time #PCDATA>
+				<!ELEMENT coursetitle #PCDATA>
+				<!ELEMENT coursecode #PCDATA>
+				<!ELEMENT description #PCDATA>
+
+]>
+
+<timetable value="regular">
+	<timeslot year="2018" semester="sem1">
+		<date>20-07-18</date>
+		<holiday>8-8-18</holiday>
+		<coursedetails>
+			<supervisor empid="e101">Heta Parekh</supervisor>
+			<time>10:00 - 5:00</time>
+			<coursetitle>XML</coursetitle>
+			<coursecode>1107</coursecode>
+			<description>XML</description>
+		</coursedetails>
+	</timeslot>
+	<timeslot year="2019" semester="sem3">
+		<date>20-12-18</date>
+		<holiday>8-1-19</holiday>
+		<coursedetails>
+			<supervisor empid="e101">Pooja</supervisor>
+			<time>10:00 - 5:00</time>
+			<coursetitle>PDCD</coursetitle>
+			<coursecode>1209</coursecode>
+			<description>PDCD</description>
+		</coursedetails>
+	</timeslot>
+	<timeslot year="2018" semester="sem5">
+		<date>20-07-18</date>
+		<holiday>8-8-18</holiday>
+		<coursedetails>
+			<supervisor empid="e101">Maghna</supervisor>
+			<time>10:00 - 5:00</time>
+			<coursetitle>WAD</coursetitle>
+			<coursecode>1578</coursecode>
+			<description>WAD</description>
+		</coursedetails>
+	</timeslot>
+</timetable>

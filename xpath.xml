@@ -1,0 +1,6 @@
+//timeslot/@*
+//timeslot[2]/date
+//timeslot[2]/coursedetails/supervisor/@empid
+//timeslot[@semester='5']
+//timeslot[@semester='3']/coursedetails/coursecode
+//supervisor[@empid="e101"]/supervisorname

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           attributeFormDefault="unqualified"
+           elementFormDefault="qualified">
+    
+    <xs:element name="timetable">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="timeslot" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="date" maxOccurs="unbounded" type="xs:date"/>
+                            <xs:element name="holiday" maxOccurs="unbounded" type="xs:string"/>
+                            <xs:element name="courseDetails" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Supervisor">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="title" type="xs:string"/>
+                                                    <xs:element name="supervisorName" type="xs:string"/>
+                                                </xs:sequence>
+                                                <xs:attribute name="empID" type="xs:string" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Time" type="xs:time"/>
+                                        <xs:element name="courseTitle" type="xs:string"/>
+                                        <xs:element name="courseCode" type="xs:string"/>
+                                        <xs:element name="description" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="year" type="xs:string" use="required"/>
+                        <xs:attribute name="semester" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Type" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="ATKT"/>
+                        <xs:enumeration value="Regular"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>
